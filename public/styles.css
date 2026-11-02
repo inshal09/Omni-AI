@@ -1,0 +1,204 @@
+/* OmniChat AI Styles */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2d2b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #44423e;
+}
+
+/* Markdown prose rendering */
+.prose-ai {
+  color: #e7e5e4;
+  line-height: 1.7;
+  font-size: 0.9375rem;
+}
+
+.prose-ai p {
+  margin-bottom: 0.85rem;
+}
+
+.prose-ai h1, .prose-ai h2, .prose-ai h3, .prose-ai h4 {
+  color: #fbfad9;
+  font-weight: 700;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.prose-ai h1 { font-size: 1.4rem; }
+.prose-ai h2 { font-size: 1.25rem; }
+.prose-ai h3 { font-size: 1.1rem; }
+
+.prose-ai ul, .prose-ai ol {
+  margin-left: 1.4rem;
+  margin-bottom: 0.85rem;
+}
+.prose-ai ul { list-style-type: disc; }
+.prose-ai ol { list-style-type: decimal; }
+.prose-ai li { margin-bottom: 0.25rem; }
+
+.prose-ai blockquote {
+  border-left: 3px solid #d97757;
+  padding-left: 0.85rem;
+  font-style: italic;
+  color: #a8a29e;
+  margin: 0.85rem 0;
+}
+
+.prose-ai table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.prose-ai th, .prose-ai td {
+  border: 1px solid #2e2d2b;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose-ai th {
+  background-color: #1a1918;
+  color: #fbfad9;
+}
+
+/* Code Blocks */
+.prose-ai pre {
+  background-color: #181716 !important;
+  border: 1px solid #2e2d2b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.prose-ai code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+.prose-ai p > code, .prose-ai li > code {
+  background-color: #262524;
+  color: #fbfad9;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.35rem;
+  border: 1px solid #383633;
+}
+
+/* Copy code button */
+.copy-code-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #2e2d2b;
+  color: #a8a29e;
+  border: 1px solid #44423e;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.copy-code-btn:hover {
+  background-color: #d97757;
+  color: #000;
+  border-color: #d97757;
+}
+
+/* Collapsible Reasoning Disclosure Accordion */
+.thinking-block {
+  background: #171615;
+  border: 1px solid #2e2d2b;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.thinking-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.85rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d97757;
+  background: #1b1a19;
+}
+
+.thinking-summary:hover {
+  background: #232220;
+}
+
+.thinking-content {
+  padding: 0.85rem;
+  font-size: 0.8rem;
+  color: #a8a29e;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  max-height: 320px;
+  overflow-y: auto;
+  border-top: 1px solid #232220;
+}
+
+/* Attachment preview chip */
+.attachment-chip {
+  background: #262524;
+  border: 1px solid #383633;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: #e7e5e4;
+  max-width: 200px;
+}
+.attachment-chip .filename {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Streaming cursor */
+.typing-cursor::after {
+  content: '▋';
+  display: inline-block;
+  color: #d97757;
+  animation: blink 0.9s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Drag & Drop Overlay */
+.drag-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(217, 119, 87, 0.15);
+  border: 2px dashed #d97757;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
+

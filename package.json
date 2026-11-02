@@ -1,0 +1,22 @@
+{
+  "name": "ai-chat-app",
+  "version": "1.0.0",
+  "description": "Unlimited, free-ready full-featured AI chat interface with model switcher, high effort reasoning, and file attachments",
+  "main": "server.js",
+  "bin": "server.js",
+  "pkg": {
+    "assets": [
+      "public/**/*"
+    ],
+    "targets": [
+      "node20-win-x64"
+    ]
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build:exe": "npx @yao-pkg/pkg server.js --targets node20-win-x64 --output OmniChat.exe"
+  },
+  "keywords": ["ai", "chat", "llm", "claude", "reasoning", "full-stack"],
+  "author": "Antigravity",
+  "license": "MIT"
+}
